@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!--FontAwsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+    <body>
+        <!-- bg-->
+       <main style="background-image: url(/src/image/1.png);" class="flex  
+        min-h-screen bg-auto  w-full h-full bg-no-repeat  bg-cover">
+        
+        <div class=" container  relative ml-48 bg-white/10 backdrop-filter backdrop-blur-sm shadow-2xl ">
+            <!-- Head Tag-->
+            <h1 class="text-center text-5xl mt-24 font-extrabold font-gemunu text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">YAPILACAKLAR</span> LİSTEM</h1>
+            
+            <!--ToDo List Main Start-->
+            <form>
+                <div class="group search flex relative items-center justify-center py-8 ">
+                    <input  type="text" class=" todo-input bg-transparent border-b border-emerald-600 focus:outline-none w-96 h-12 rounded-l text-center text-3xl relative placeholder:text-black  font-gemunu" placeholder="Ekle...">
+                    <button class="todo-button relative mt-3 ml-3" type="submit">
+                        <i class=" fa-solid fa-plus fa-fade fa-xl"></i>
+                    </button>    
+                </div>
+                <div class="select grid relative items-center justify-center py-5 text-xl  ">
+                    <select name="todos" class="filter-todo  h-9 w-60 bg-transparent border-b border-sky-400
+                    focus:outline-none">
+                    <option value="all" class="text-center font-sans text-black bg-gray-500" >Hepsi</option> 
+                    <option value="completed"  class="text-center font-sans bg-green-500" >Tamamlananlar</option>
+                    <option value="uncompleted" class="text-center font-sans bg-yellow-400" >Tamamlanmayanlar</option>
+                </select>
+                </div>
+            </form>
+            
+            <div class="todo-container  relative left-60">
+            <ul class="todo-list relative"></ul>
+            </div>
+            
+            <!--ToDo List Main End-->           
+            <!--Alerts-->
+            <div class="all-alerts">
+                <div style="display: none;" class="alert-warning"> <!--warning start--> 
+                    <div class="flex p-4 mb-4 text-sm absolute bottom-10 right-10 text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800" role="alert">
+                        <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Info</span>
+                        <div>
+                          <span class="font-medium">Uyarı!</span> Lütfen kutucuğu doldurduğunuzdan emin olun!
+                        </div>
+                      </div>  
+                </div> <!--warning end-->
+                <div style="display: none;" class="alert-success"> <!--Success alert start-->
+                    <div class="flex p-4 mb-4 text-sm absolute bottom-10 right-10 text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800" role="alert">
+                        <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Info</span>
+                        <div>
+                          <span class="font-medium">Başarıyla listenize eklendi!</span>
+                        </div>
+                      </div>
+                </div> <!--Success alert end-->
+            </div> <!--all-alertsend-->
+            
+            
+                    
+            
+       </main>
+    
+
+    
+
+        
+       
+
+
+    <script src="/src/js/script.js" ></script>
+    </body>
+</html>
